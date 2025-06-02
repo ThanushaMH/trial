@@ -1,1 +1,115 @@
-hii im sad please leave me alone
+3 ) program 03 :
+
+sdk install gradle
+new project - gradle (groovy)
+c+p build.gradle - org.example.main(sowj-sample-readme)
+(terminal) -> gradle run
+program3-title  c+p index,css,logo
+create git repo - git init
+                  git add .
+                  git commit -m "commit message"
+                  git remote add origin url
+                  git push -u origin master
+c+p selenium groovy dependency from mvndependenies
+testng 
+useTestNG()
+(terminal) -> gradle test
+c+p jar part from readme
+(terminal) -> gradle jar
+jar file is created in libs
+(terminal) -> java -jar ./build/libs/(name if the jar file)
+
+---------------------------------------------------------------------------------------
+4 ) program 4 :
+
+create maven project
+POM c+p
+(terminal) -> mvn clean complie
+(terminal) -> mvn package (jar file is created in target)
+(terminal) -> java -jar ./target/(name of the jar file)
+(terminal) -> gradle init --type pom (build.gradle gets created)
+c+p build.gradle
+(terminal) -> gradle clean build
+(terminal) -> java -jar ./build/libs/(name of the jar file)
+
+--------------------------------------------------------------------------------------
+6 ) program 06 :
+
+java -jar jenkins.war --httpPort=8080
+jenkins account - username - thanzzz, password - Thanusha@123
++new item (name) and select freestyle
+build step alli - c:
+                  cd (path of the 2nd program)
+                  mvn test
+apply and safe
++new item (name) and select freestyle 
+select git and c+p git repo url (where you have 2nd prg)
+in credentials under git, select +add (jenkins)
+kind - username and password of git (ThanushaMH,Thanushamhosgoudar)
+apply and safe
++new item (name) and freestyle
+repeat line 46,47,48
+build step - mvn step
+
+-----------------------------------------------------------------------------------------------
+7 ) program 07
+
+download oracle virtual box and vagrant 
+go to vagrant website download and c+p for linux
+(terminal) -> cd (path of vagrant)
+              vagrant up
+              exit
+              vagrant hault
+              mkdir ansible_controller
+              vagrant init centos/7
+c+p this in that : 
+
+config.vm.provision “shell”, inline: <<-SHELL
+ sudo yum install epel-release –y
+ sudo yum install ansible –y
+SHELL
+
+(terminal) -> vagrant up
+              vagrant ssh
+              ansible --version
+              mkdir ansible-project
+              touch hosts
+create playbook.yml in ansible-project
+open differnt terminal window 
+(terminal) -> cd Ansible Demo
+              cd ansible hosts
+c+p this :
+
+Config.vm.define “web” do |web|
+web.vm.box = “centos/7”
+web.vm.hostname = “web”
+web.vm.network “private_network”, ip: “192.168.33.10”
+end
+
+config.vm.define “db” do |db|
+db.vm.box = “centos/7”
+db.vm.hostname = “db”
+db.vm.network “private_network”, ip: “192.168.33.11”
+end
+config.vm.network “forwarded_port”, guest:80,host:8080
+
+(terminal) -> vagrant validate
+              vagrant up
+              vagrant ssh web
+-------------------------------------------------------------------------------------------
+8 ) program 08 :
+
+(terminal) -> wsl --install
+              sudo apt update
+              sudo apt upgrade -y
+              sudo apt install openjdk-17-jdk -y
+              sudo apt install maven -y
+              sudo apt install git -y
+              sudo apt install ansible -y
+set up ssh key
+install jenkins
++new item (name) and freestyle
+select git c+p url
+build step : cd %WORKSPACE%
+             mvn clean packages
+
