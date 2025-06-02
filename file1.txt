@@ -99,7 +99,7 @@ config.vm.network “forwarded_port”, guest:80,host:8080
 -------------------------------------------------------------------------------------------
 8 ) program 08 :
 
-(terminal) -> wsl --install
+(terminal) -> wsl --install  username thanu, password Thanusha123
               sudo apt update
               sudo apt upgrade -y
               sudo apt install openjdk-17-jdk -y
